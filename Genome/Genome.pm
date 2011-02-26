@@ -1,11 +1,10 @@
-use v6;
+class Genome;
 
-class Genome {
-  has $.header is rw;
-  has $.seq is rw;
-  has Genome::Feature @.features is rw;
+has $.header is rw;
+has $.seq is rw;
+has Genome::Feature @.features is rw;
 
-  method get_features ($type) {
-    return $.features.grep: {$_.type eq $type};
-  }
+method get_features ($type) {
+  return $.features.grep: {$_.type eq $type};
 }
+
