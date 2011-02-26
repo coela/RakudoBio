@@ -1,3 +1,6 @@
+use v6;
+use RakudoBio::Genome;
+
 class RakudoBio::Grammar::Actions::GenBank {
 
   method TOP($/) {
