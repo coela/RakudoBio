@@ -1,5 +1,3 @@
-use v6;
-
 grammar RakudoBio::Grammer::GenBank {
   token TOP {
     ^<header>

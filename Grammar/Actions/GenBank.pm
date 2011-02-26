@@ -1,5 +1,3 @@
-use v6;
-
 class RakudoBio::Grammar::Actions::GenBank {
 
   method TOP($/) {
