@@ -4,7 +4,7 @@ use RakudoBio::Genome;
 class RakudoBio::Grammar::Actions::GenBank {
 
   method TOP($/) {
-    make Genome.new(
+    make RakudoBio::Genome.new(
         features => $<feature>>>.ast,
         seq => $<origin>.ast,
         header => ~$<header>,
@@ -18,7 +18,7 @@ class RakudoBio::Grammar::Actions::GenBank {
       %annotation{$_<annotation_head><annotation_type>} ~= $_<annotation_continued>.map: {$_<text>};
     } 
     
-    make Genome::Feature.new(
+    make RakudoBio::Feature.new(
         type => ~$<feature_type>,
         position => ~$<position>,
         annotation => %annotation,

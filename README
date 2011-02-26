@@ -1,0 +1,12 @@
+#example
+use v6;
+use RakudoBio::Genome;
+use RakudoBio::Grammar::GenBank;
+use RakudoBio::Grammar::Actions::GenBank;
+my $fh = slurp "test.gbk" or die;
+
+my $gb = RakudoBio::Grammar::GenBank.parse($fh, actions=>RakudoBio::Grammar::Actions::GenBank).ast;
+for $gb.get_features('CDS') -> $cds {
+  say $cds.annotation{"locus_tag"};
+  say $cds.position;
+}
