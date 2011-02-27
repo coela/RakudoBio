@@ -1,0 +1,9 @@
+{
+    "name" : "RakudoBio",
+    "version" : "*",
+    "description" : "perl6 GenBank parser",
+    "depends" : [ ],
+    "repo-type" : "git",
+    "repo-url" : "git://github.com/coela/RakudoBio.git"
+}
+
