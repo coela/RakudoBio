@@ -8,10 +8,10 @@ has %!paring_scheme = (
     I => any('A','C','U'),
     );
 
-multi method readable (Str $AA where {$AA.chars == 1}){
-  return %!paring_scheme{$AA};
+multi method readable (Str $nuc where {$nuc.chars == 1}){
+  return %!paring_scheme{$nuc};
 }
 
-multi method readable (Str $AA where {$AA.chars == 3}){
-  return %!paring_scheme{$AA.substr(2,1)};
+multi method readable (Str $nuc where {$nuc.chars == 3}){
+  return %!paring_scheme{$nuc.substr(2,1)};
 }
